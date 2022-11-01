@@ -7,7 +7,7 @@ const userSchema = new Schema({
   dateOfBirth: Types.Date,
   gender: Types.String,
   emailId: Types.String,
-  password: Types.String,
+  password: { type: Types.String, select: false },
   deleted: { type: Types.Boolean, default: false, select: false },
   createdAt: { type: Types.Date, select: false },
   updatedAt: { type: Types.Date, select: false },

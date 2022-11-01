@@ -12,7 +12,7 @@ module.exports = {
       let result;
       if (schema.body) {
         result = schema.body.validate(req.body);
-        valid = !result.error();
+        valid = !result.error;
       }
       if (valid) {
         next();
